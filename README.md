@@ -1,0 +1,2 @@
+# PokemonBattle
+Automating Pokemon Battles
