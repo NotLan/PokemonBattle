@@ -20,5 +20,5 @@ class TestBattle:
         training_battle_page.select_difficulty()
         training_battle_page.click_auto_tap()
         battle_page = training_battle_page.click_battle()
-        battle_page.battle_health_stats()
-        training_battle_page.click_add_pokemon()
+        battle_page.is_battle_still_occurring()
+        assert battle_page.did_we_win()
