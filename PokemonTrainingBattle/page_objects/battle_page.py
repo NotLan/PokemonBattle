@@ -1,3 +1,5 @@
+from time import sleep
+
 from ottermation.plugins.playwright import AbstractPage
 
 
@@ -21,11 +23,17 @@ class BattlePage(AbstractPage):
 
     def click_shield(self):
         self.page.click(self.shield_protection)
+        self.page.is_hidden(self.shield_protection, timeout=500000)
 
     def is_battle_still_occurring(self):
+        shield = 3
         while self.page.is_visible(self.shields) is False:
             if self.page.is_visible(self.shield_protection):
                 self.click_shield()
+                shield = shield - 1
 
     def did_we_win(self):
-        return self.page.is_visible(self.defeat_header, timeout=1000)
+        while not self.page.is_visible(self.rematch_button, timeout=1000):
+            sleep(1)
+
+        self.page.is_visible(self.defeat_header, timeout=1000)

@@ -58,9 +58,9 @@ class PvPokePage(AbstractPage):
     def select_difficulty(self):
         difficulty_list = [
             "Novice",
-            "Rival",
-            "Elite",
-            "Champion"
+            # "Rival",
+            # "Elite",
+            # "Champion"
         ]
         self.page.type(self.difficulty_dropdown, random.choice(difficulty_list), delay=5)
 
