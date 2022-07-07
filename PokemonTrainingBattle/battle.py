@@ -1,18 +1,24 @@
 import pytest
 
-from helpers.go_to_pvpoke import PvPokePage
-from helpers.generate_pokemon_list import pick_random_five_pokemon
+from page_objects.pvpoke_page import *
+from helpers.generate_pokemon_list import *
+from page_objects.battle_page import BattlePage
 
 
 class TestBattle:
 
     @pytest.fixture()
-    def go_to_webpage(self, page) -> PvPokePage:
+    def training_battle_page(self, page) -> PvPokePage:
         pokemon_page = PvPokePage(page)
-        p = pokemon_page.go_to_site()
+        pokemon_page.go_to_site()
+        return pokemon_page
+
+    def test_battle(self, training_battle_page):
         picked_pokemon = pick_random_five_pokemon()
-        return picked_pokemon
-
-    def test_battle(self, go_to_webpage):
-
-        print("1")
+        training_battle_page.select_pokemon(pokemon_list=picked_pokemon)
+        training_battle_page.select_league()
+        training_battle_page.select_difficulty()
+        training_battle_page.click_auto_tap()
+        battle_page = training_battle_page.click_battle()
+        battle_page.battle_health_stats()
+        training_battle_page.click_add_pokemon()
