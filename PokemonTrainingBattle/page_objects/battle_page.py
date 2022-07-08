@@ -14,6 +14,7 @@ class BattlePage(AbstractPage):
     rematch_button = 'text=Rematch'
     defeat_header = 'text=Defeat'
     shields = '.shields >> nth=0'
+    not_now = 'text=Not Now'
     balls = '.balls >> nth=0'
 
     def battle_health_stats(self):
@@ -27,13 +28,13 @@ class BattlePage(AbstractPage):
 
     def is_battle_still_occurring(self):
         shield = 3
-        while self.page.is_visible(self.shields) is False:
-            if self.page.is_visible(self.shield_protection):
-                self.click_shield()
-                shield = shield - 1
+        if not self.page.is_visible(self.shields) or shield != 0:
+            sleep(10)
+        else:
+            self.click_shield()
+            shield -= 1
 
     def did_we_win(self):
-        while not self.page.is_visible(self.rematch_button, timeout=1000):
-            sleep(1)
-
+        while not self.page.wait_for_selector(self.rematch_button, timeout=1000):
+            sleep(30)
         self.page.is_visible(self.defeat_header, timeout=1000)

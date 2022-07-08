@@ -16,8 +16,10 @@ class PvPokePage(AbstractPage):
     league_dropdown = '.league-cup-select'
     difficulty_dropdown = '.difficulty-select'
     auto_tap_button = 'text=Autotap >> nth=0'
+    no_shields = '.option >> nth=0'
+    random_button = 'text=Random >> nth=1'
 
-    url = 'https://pvpoke.com/train/'
+    url = 'https://pvpoke.com/battle/'
 
     def go_to_site(self):
         """
@@ -27,11 +29,11 @@ class PvPokePage(AbstractPage):
         self.page.goto(self.url, wait_until="networkidle")
         return PvPokePage
 
-    def pull_opponents_health(self) -> str:
-        return self.page.get_attribute(self.opponent_pokemon_health, "style")
+    def click_opponent_random(self):
+        self.page.click(self.random_button)
 
-    def pull_my_health(self) -> str:
-        self.page.get_attribute(self.my_pokemon_health, "style")
+    def click_no_shields(self):
+        self.page.click(self.no_shields)
 
     def click_auto_tap(self):
         self.page.click(self.auto_tap_button)
@@ -51,9 +53,7 @@ class PvPokePage(AbstractPage):
 
     def select_pokemon(self, pokemon_list):
         for pokemon in pokemon_list:
-            self.click_add_a_pokemon()
             self.page.type(self.search_text_field, f"{pokemon}", delay=5)
-            self.click_add_selected_pokemon()
 
     def select_difficulty(self):
         difficulty_list = [
