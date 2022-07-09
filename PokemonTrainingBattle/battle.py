@@ -21,6 +21,4 @@ class TestBattle:
         training_battle_page.click_no_shields()
         training_battle_page.click_opponent_random()
         battle_page = training_battle_page.click_battle()
-        training_battle_page.click_auto_tap()
-        battle_page.is_battle_still_occurring()
         assert battle_page.did_we_win()

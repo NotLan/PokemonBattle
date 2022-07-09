@@ -17,6 +17,7 @@ class PvPokePage(AbstractPage):
     difficulty_dropdown = '.difficulty-select'
     auto_tap_button = 'text=Autotap >> nth=0'
     no_shields = '.option >> nth=0'
+    no_oppenent_shield = 'div:nth-child(2) > .poke-stats > .options > .shield-section > .form-group > div >> nth=0'
     random_button = 'text=Random >> nth=1'
 
     url = 'https://pvpoke.com/battle/'
@@ -31,6 +32,9 @@ class PvPokePage(AbstractPage):
 
     def click_opponent_random(self):
         self.page.click(self.random_button)
+
+    def click_no_opponent_shield(self):
+        self.page.click(self.no_oppenent_shield)
 
     def click_no_shields(self):
         self.page.click(self.no_shields)
@@ -63,5 +67,3 @@ class PvPokePage(AbstractPage):
             # "Champion"
         ]
         self.page.type(self.difficulty_dropdown, random.choice(difficulty_list), delay=5)
-
-
