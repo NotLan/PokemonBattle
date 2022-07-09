@@ -1,6 +1,6 @@
 from time import sleep
 
-from ottermation.plugins.playwright import AbstractPage
+from plugins.playwright import AbstractPage
 
 
 class BattlePage(AbstractPage):
