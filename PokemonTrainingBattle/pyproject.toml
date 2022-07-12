@@ -1,8 +1,8 @@
 [tool.poetry]
-name = "Automationv2"
-version = "0.6.0"
+name = "Poke"
+version = "0.1.0"
 description = ""
-authors = ["Gavriel <grachaelhomann@datto.com>", "Ian <Iallheim@datto.com>", "Trevor <TLezynski@datto.com>"]
+authors = ["Ian <Ian.allheim@gmail.com.com>"]
 
 # Set our internal pypi repository as the default source for packages
 [[tool.poetry.source]]

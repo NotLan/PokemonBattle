@@ -26,3 +26,8 @@ def pick_random_five_pokemon():
     return pokemon_list
 
 
+def write_out_come_down(battle_outcome):
+    f = open("battle_outcomes.json", "w")
+    f.newlines(battle_outcome)
+    f.close()
+
