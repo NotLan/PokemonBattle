@@ -4,14 +4,7 @@ version = "0.1.0"
 description = ""
 authors = ["Ian <Ian.allheim@gmail.com.com>"]
 
-# Set our internal pypi repository as the default source for packages
-[[tool.poetry.source]]
-name = "datto"
-url = "https://pypi.datto.net/simple"
-default = true
-
 [tool.poetry.dependencies]
-ottermation = { version = "^2.0", source = "datto" }
 hmac_auth = { version = "^0.1", source = "datto" }
 python = "^3.9"
 playwright = "^1.17.2"
@@ -24,10 +17,6 @@ randomname = "^0.1.5"
 pyotp = "^2.6.0"
 tomli-w = "^1.0.0"
 click = "^8.1.3"
-
-[tool.poetry.dev-dependencies]
-isort = "^5.10.1"
-black = "^22.1.0"
 
 [tool.black]
 line-length = 120
