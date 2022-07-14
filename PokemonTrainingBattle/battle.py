@@ -22,4 +22,4 @@ class TestBattle:
         training_battle_page.click_opponent_random()
         training_battle_page.click_battle()
         stats = training_battle_page.pull_stats()
-        write_out_come_down(stats)
+        write_outcome_down(stats)

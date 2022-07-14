@@ -1,5 +1,5 @@
 import json
-
+import pickle
 from pyotp import random
 
 
@@ -26,9 +26,12 @@ def pick_random_five_pokemon():
     return pokemon_list
 
 
-def write_out_come_down(battle_outcome):
-    data = json.load("battle_outcomes.json")
-    open(data, "r")
-    json.dump(data, file)
+def write_outcome_down(battle_outcome):
+    json1 = json.dumps(battle_outcome, indent=4)
+    f = open("dict.json", "a")
+    f.write(f"{json1}")
+    f.close()
 
-
+    # filehandler = open("battle_outcome.json", 'ab+')
+    # pickle.dump(battle_outcome, filehandler)
+    # filehandler.close()
