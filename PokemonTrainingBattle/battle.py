@@ -2,7 +2,6 @@ import pytest
 
 from page_objects.pvpoke_page import *
 from helpers.generate_pokemon_list import *
-from page_objects.battle_page import BattlePage
 
 
 class TestBattle:
@@ -16,10 +15,9 @@ class TestBattle:
     def test_battle(self, training_battle_page):
         picked_pokemon = pick_random_five_pokemon()
         my_pokemon = training_battle_page.select_my_pokemon(pokemon_list=picked_pokemon)
-        opponent_pokemon = training_battle_page.select_opponent_pokemon(pokemon_list=my_pokemon)
+        training_battle_page.select_opponent_pokemon(pokemon_list=my_pokemon)
         training_battle_page.click_no_shields()
         training_battle_page.click_no_opponent_shield()
         training_battle_page.click_opponent_random()
         training_battle_page.click_battle()
-        stats = training_battle_page.pull_stats()
-        write_outcome_down(stats)
+        write_outcome_down(training_battle_page.pull_stats())

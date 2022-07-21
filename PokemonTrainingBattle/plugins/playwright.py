@@ -43,21 +43,6 @@ class AbstractPage(ABC):
         self.page.goto(self.url)
 
 
-def log_screenshot(page: Page, nodeid: str):
-    screenshot_dir = Path(os.getenv("SCREENSHOT_DIR", os.getcwd()))
-    screenshot_dir.mkdir(exist_ok=True)
-    filename = f"{slugify(nodeid)}.png"
-    screenshot = page.screenshot(path=str(screenshot_dir / filename))
-    if _logger_supports_attachments:
-        try:
-            # noinspection PyArgumentList
-            logger.warning(
-                f"Attached file: {filename}", attachment={"name": filename, "data": screenshot, "mime": "image/png"}  # type: ignore
-            )
-        except BaseException as e:
-            logger.exception("Something went wrong while logging screenshot to reportportal", exc_info=e)
-
-
 def tracing_start(page: Page):
     """
     This function starts the tracing and enables Screenshots/Snapshots
@@ -90,18 +75,6 @@ def tracing_stop(page: Page, nodeid: str, save: bool):
                 logger.exception("Something went wrong while logging trace zip to reportportal", exc_info=e)
     else:
         page.context.tracing.stop()
-
-
-@pytest.hookimpl(hookwrapper=True)
-def pytest_runtest_makereport(item: Any, call: Any):
-    outcome = yield
-    result = outcome.get_result()
-    if call.when == "call":
-        if result.failed:
-            _failed_node_ids.append(item.nodeid)
-        if call.excinfo is not None and "page" in item.funcargs:
-            page = item.funcargs["page"]
-            log_screenshot(page, item.nodeid)
 
 
 @pytest.hookimpl(hookwrapper=True)
