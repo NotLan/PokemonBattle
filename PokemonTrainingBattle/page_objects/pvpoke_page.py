@@ -1,4 +1,7 @@
 from time import sleep
+
+import logging
+
 from plugins.playwright import AbstractPage
 from pyotp import random
 
@@ -22,7 +25,7 @@ class PvPokePage(AbstractPage):
     no_oppenent_shield = 'div:nth-child(2) > .poke-stats > .options > .shield-section > .form-group > div >> nth=0'
     random_button = 'text=Random >> nth=1'
     faint = '.item.faint'
-    outcome = '//div[contains(@class, "summary section white")]'
+    outcome_section = '//div[contains(@class, "summary section white")]'
 
     url = 'https://pvpoke.com/battle/'
 
@@ -55,14 +58,10 @@ class PvPokePage(AbstractPage):
         self.page.click(self.add_pokemon_button)
 
     def select_users_pokemon(self, pokemon_list):
-        my_pokemon = random.choice(pokemon_list)
-        self.page.type(self.search_text_field, f"{my_pokemon}", delay=5)
-        pokemon_list.remove(my_pokemon)
-        return my_pokemon
+        self.page.type(self.search_text_field, f"{pokemon_list[0]}", delay=5)
 
     def select_opponents_pokemon(self, pokemon_list):
-        opponent_pokemon = random.choice(pokemon_list)
-        self.page.type(self.opponent_search_text_field, f"{opponent_pokemon}", delay=5)
+        self.page.type(self.opponent_search_text_field, f"{pokemon_list[1]}", delay=5)
 
     def select_difficulty(self):
         difficulty_list = [
@@ -74,7 +73,7 @@ class PvPokePage(AbstractPage):
         self.page.type(self.difficulty_dropdown, random.choice(difficulty_list), delay=5)
 
     def pull_stats(self):
-        while self.page.text_content(self.outcome) is None:
+        while self.page.text_content(self.outcome_section) is None:
             sleep(1)
 
         pokemon_names = \
@@ -120,3 +119,19 @@ class PvPokePage(AbstractPage):
             }
             number_of_pokemon += 1
         return pokemon_list
+
+    def who_won(self, picked_pokemon):
+        outcome = self.page.text_content(self.outcome_section)
+        logger = logging.getLogger(__name__)
+
+        if "wins" in outcome:
+            logger.info(f"\n {picked_pokemon[0]} won!")
+            logger.info(f"\n {picked_pokemon[1]} lost :( ")
+        else:
+            logger.info(f"\n {picked_pokemon[1]} won!")
+            logger.info(f"\n {picked_pokemon[0]} lost :(")
+
+
+
+
+

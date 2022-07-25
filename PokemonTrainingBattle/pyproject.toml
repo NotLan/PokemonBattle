@@ -4,6 +4,10 @@ version = "1.0.0"
 description = "To battle pokemon and write the stats of the outcome"
 authors = ["Ian Allheim <ian.allheim@gmail.com>"]
 
+[tool.pytest.ini_options]
+log_cli = true
+log_cli_level = "INFO"
+
 [tool.poetry.dependencies]
 python = "^3.7"
 pytest-playwright = "^0.3.0"
