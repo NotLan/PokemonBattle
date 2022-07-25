@@ -54,22 +54,22 @@ class PvPokePage(AbstractPage):
     def click_add_a_pokemon(self):
         self.page.click(self.add_pokemon_button)
 
-    def select_my_pokemon(self, pokemon_list):
+    def select_users_pokemon(self, pokemon_list):
         my_pokemon = random.choice(pokemon_list)
         self.page.type(self.search_text_field, f"{my_pokemon}", delay=5)
         pokemon_list.remove(my_pokemon)
         return my_pokemon
 
-    def select_opponent_pokemon(self, pokemon_list):
+    def select_opponents_pokemon(self, pokemon_list):
         opponent_pokemon = random.choice(pokemon_list)
         self.page.type(self.opponent_search_text_field, f"{opponent_pokemon}", delay=5)
 
     def select_difficulty(self):
         difficulty_list = [
             "Novice",
-            # "Rival",
-            # "Elite",
-            # "Champion"
+            "Rival",
+            "Elite",
+            "Champion"
         ]
         self.page.type(self.difficulty_dropdown, random.choice(difficulty_list), delay=5)
 

@@ -658,5 +658,165 @@
         "Energy Gained": "48",
         "Energy Used": "35",
         "Energy Remaining": "13"
+    },
+    "Salazzle": {
+        "Battle Rating": "894",
+        "Total Damage": "110",
+        "Fast Move Damage": "60 (54.5%)",
+        "Charged Move Damage": "50 (45.4%)",
+        "Turns to first charged move": "15 (7.5s)",
+        "Energy Gained": "40",
+        "Energy Used": "35",
+        "Energy Remaining": "5"
+    },
+    "Sneasel": {
+        "Battle Rating": "105",
+        "Total Damage": "24",
+        "Fast Move Damage": "24 (100%)",
+        "Charged Move Damage": "0 (0%)",
+        "Turns to first charged move": "-",
+        "Energy Gained": "30",
+        "Energy Used": "0",
+        "Energy Remaining": "30"
+    },
+    "Goomy": {
+        "Battle Rating": "134",
+        "Total Damage": "34",
+        "Fast Move Damage": "34 (100%)",
+        "Charged Move Damage": "0 (0%)",
+        "Turns to first charged move": "-",
+        "Energy Gained": "34",
+        "Energy Used": "0",
+        "Energy Remaining": "34"
+    },
+    "Sandslash": {
+        "Battle Rating": "865",
+        "Total Damage": "130",
+        "Fast Move Damage": "24 (18.4%)",
+        "Charged Move Damage": "106 (81.5%)",
+        "Turns to first charged move": "10 (5s)",
+        "Energy Gained": "72",
+        "Energy Used": "65",
+        "Energy Remaining": "7"
+    },
+    "Aegislash": {
+        "Battle Rating": "944",
+        "Total Damage": "95",
+        "Fast Move Damage": "7 (7.3%)",
+        "Charged Move Damage": "88 (92.6%)",
+        "Turns to first charged move": "16 (8s)",
+        "Energy Gained": "63",
+        "Energy Used": "55",
+        "Energy Remaining": "8"
+    },
+    "Hatterene": {
+        "Battle Rating": "55",
+        "Total Damage": "15",
+        "Fast Move Damage": "15 (100%)",
+        "Charged Move Damage": "0 (0%)",
+        "Turns to first charged move": "-",
+        "Energy Gained": "36",
+        "Energy Used": "0",
+        "Energy Remaining": "36"
+    },
+    "Avalugg": {
+        "Battle Rating": "854",
+        "Total Damage": "110",
+        "Fast Move Damage": "54 (49%)",
+        "Charged Move Damage": "56 (50.9%)",
+        "Turns to first charged move": "19 (9.5s)",
+        "Energy Gained": "36",
+        "Energy Used": "35",
+        "Energy Remaining": "1"
+    },
+    "Zigzagoon": {
+        "Battle Rating": "145",
+        "Total Damage": "36",
+        "Fast Move Damage": "36 (100%)",
+        "Charged Move Damage": "0 (0%)",
+        "Turns to first charged move": "19 (9.5s)",
+        "Energy Gained": "36",
+        "Energy Used": "0",
+        "Energy Remaining": "36"
+    },
+    "Uxie": {
+        "Battle Rating": "577",
+        "Total Damage": "173",
+        "Fast Move Damage": "85 (49.1%)",
+        "Charged Move Damage": "88 (50.8%)",
+        "Turns to first charged move": "24 (12s)",
+        "Energy Gained": "60",
+        "Energy Used": "60",
+        "Energy Remaining": "0"
+    },
+    "Cyndaquil": {
+        "Battle Rating": "422",
+        "Total Damage": "103",
+        "Fast Move Damage": "50 (48.5%)",
+        "Charged Move Damage": "53 (51.4%)",
+        "Turns to first charged move": "20 (10s)",
+        "Energy Gained": "60",
+        "Energy Used": "55",
+        "Energy Remaining": "5"
+    },
+    "Espeon": {
+        "Battle Rating": "407",
+        "Total Damage": "92",
+        "Fast Move Damage": "92 (100%)",
+        "Charged Move Damage": "0 (0%)",
+        "Turns to first charged move": "-",
+        "Energy Gained": "48",
+        "Energy Used": "0",
+        "Energy Remaining": "48"
+    },
+    "Koffing": {
+        "Battle Rating": "592",
+        "Total Damage": "125",
+        "Fast Move Damage": "35 (28%)",
+        "Charged Move Damage": "90 (72%)",
+        "Turns to first charged move": "18 (9s)",
+        "Energy Gained": "60",
+        "Energy Used": "50",
+        "Energy Remaining": "10"
+    },
+    "Amoonguss": {
+        "Battle Rating": "465",
+        "Total Damage": "95",
+        "Fast Move Damage": "30 (31.5%)",
+        "Charged Move Damage": "65 (68.4%)",
+        "Turns to first charged move": "18 (9s)",
+        "Energy Gained": "54",
+        "Energy Used": "45",
+        "Energy Remaining": "9"
+    },
+    "Metagross": {
+        "Battle Rating": "534",
+        "Total Damage": "182",
+        "Fast Move Damage": "70 (38.4%)",
+        "Charged Move Damage": "112 (61.5%)",
+        "Turns to first charged move": "22 (11s)",
+        "Energy Gained": "70",
+        "Energy Used": "70",
+        "Energy Remaining": "0"
+    },
+    "Charmeleon": {
+        "Battle Rating": "215",
+        "Total Damage": "82",
+        "Fast Move Damage": "40 (48.7%)",
+        "Charged Move Damage": "42 (51.2%)",
+        "Turns to first charged move": "16 (8s)",
+        "Energy Gained": "60",
+        "Energy Used": "55",
+        "Energy Remaining": "5"
+    },
+    "Azumarill": {
+        "Battle Rating": "784",
+        "Total Damage": "196",
+        "Fast Move Damage": "56 (28.5%)",
+        "Charged Move Damage": "140 (71.4%)",
+        "Turns to first charged move": "18 (9s)",
+        "Energy Gained": "77",
+        "Energy Used": "75",
+        "Energy Remaining": "2"
     }
 }
