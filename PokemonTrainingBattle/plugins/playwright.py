@@ -7,9 +7,9 @@ from typing import Any, List, Optional
 
 import pytest
 from playwright.sync_api import ConsoleMessage, Page, Request, Response
-from slugify import slugify
+#from slugify import slugify
 
-from ottermation.helpers.element_helpers import assert_elements_are_visible
+# from ottermation.helpers.element_helpers import assert_elements_are_visible
 
 logger = logging.getLogger(__name__)
 
@@ -33,10 +33,10 @@ class AbstractPage(ABC):
         if url:
             self.url = url
 
-    def assert_critical_elements_are_visible(self):
-        if not self.critical_elements:
-            logger.debug(msg="There are no critical elements set")
-        assert_elements_are_visible(self.page, self.critical_elements)
+    # def assert_critical_elements_are_visible(self):
+    #     if not self.critical_elements:
+    #         logger.debug(msg="There are no critical elements set")
+    #     assert_elements_are_visible(self.page, self.critical_elements)
 
     def navigate(self):
         assert self.url, "No url set to navigate to"
@@ -53,28 +53,28 @@ def tracing_start(page: Page):
     )
 
 
-def tracing_stop(page: Page, nodeid: str, save: bool):
-    """
-    This function stops the tracing and, depending on pass/failure, sets a path for the .zip to be created
-    """
-    tracing_dir = Path(os.getenv("TRACING_DIR", os.getcwd()))
-    tracing_dir.mkdir(exist_ok=True)
-    filename = f"{slugify(nodeid)}.zip"
-    path = str(tracing_dir / filename)
-    if save:
-        page.context.tracing.stop(path=path)
-        if _logger_supports_attachments:
-            try:
-                with open(path, "rb") as f:
-                    # noinspection PyArgumentList
-                    logger.warning(
-                        f"Attached file: {filename}",
-                        attachment={"name": filename, "data": f.read(), "mime": "application/zip"},  # type: ignore
-                    )
-            except BaseException as e:
-                logger.exception("Something went wrong while logging trace zip to reportportal", exc_info=e)
-    else:
-        page.context.tracing.stop()
+# def tracing_stop(page: Page, nodeid: str, save: bool):
+#     """
+#     This function stops the tracing and, depending on pass/failure, sets a path for the .zip to be created
+#     """
+#     tracing_dir = Path(os.getenv("TRACING_DIR", os.getcwd()))
+#     tracing_dir.mkdir(exist_ok=True)
+#     filename = f"{slugify(nodeid)}.zip"
+#     path = str(tracing_dir / filename)
+#     if save:
+#         page.context.tracing.stop(path=path)
+#         if _logger_supports_attachments:
+#             try:
+#                 with open(path, "rb") as f:
+#                     # noinspection PyArgumentList
+#                     logger.warning(
+#                         f"Attached file: {filename}",
+#                         attachment={"name": filename, "data": f.read(), "mime": "application/zip"},  # type: ignore
+#                     )
+#             except BaseException as e:
+#                 logger.exception("Something went wrong while logging trace zip to reportportal", exc_info=e)
+#     else:
+#         page.context.tracing.stop()
 
 
 @pytest.hookimpl(hookwrapper=True)

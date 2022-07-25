@@ -1,7 +1,6 @@
 from time import sleep
-from ottermation.plugins.playwright import AbstractPage
+from plugins.playwright import AbstractPage
 from pyotp import random
-
 
 
 class PvPokePage(AbstractPage):
