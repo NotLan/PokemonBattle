@@ -115,9 +115,7 @@ class PvPokePage(AbstractPage):
                 "Turns to first charged move": pokemon_turns_to_first_charged_move[number_of_pokemon],
                 "Energy Gained": pokemon_energy_gained[number_of_pokemon],
                 "Energy Used": pokemon_energy_used[number_of_pokemon],
-                "Energy Remaining": pokemon_energy_remaining[number_of_pokemon],
-                "Wins": 0,
-                "Losts": 0
+                "Energy Remaining": pokemon_energy_remaining[number_of_pokemon]
             }
             number_of_pokemon += 1
 
@@ -137,5 +135,13 @@ class PvPokePage(AbstractPage):
             return picked_pokemon[1], picked_pokemon[0]
 
     def update_winner_and_loser(self, statistics, winner, loser):
-        statistics.get(f"{winner}")["Wins"] = +1
-        statistics.get(f"{loser}")["Losts"] = -1
+        if statistics[f"{winner}"].get("Wins") is None:
+            statistics[f"{winner}"]["Wins"] = 1
+        else:
+            statistics.get(f"{winner}")["Wins"] += 1
+
+        if statistics[f"{loser}"].get("Losses") is None:
+            statistics[f"{loser}"]["Losses"] = -1
+        else:
+            statistics.get(f"{loser}")["Losses"] -= 1
+
