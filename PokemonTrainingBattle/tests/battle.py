@@ -30,4 +30,7 @@ class TestBattle:
         training_battle_page.click_no_shields()
         training_battle_page.click_no_opponent_shield()
         training_battle_page.click_battle()
-        write_outcome_down(training_battle_page.pull_stats(), training_battle_page.who_won(picked_pokemon))
+        winner, loser = training_battle_page.who_won(picked_pokemon)
+        stats = training_battle_page.pull_stats()
+        training_battle_page.update_winner_and_loser(stats, winner, loser)
+        write_outcome_down(stats)

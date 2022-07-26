@@ -16,7 +16,7 @@ def pick_random_two_pokemon():
     return pokemon_list
 
 
-def write_outcome_down(battle_outcome, who_won):
+def write_outcome_down(battle_outcome):
     with open("battle_outcomes.json") as fp:
         dictObj = json.load(fp)
     dictObj.update(battle_outcome)

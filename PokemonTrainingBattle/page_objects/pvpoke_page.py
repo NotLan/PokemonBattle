@@ -103,11 +103,11 @@ class PvPokePage(AbstractPage):
         pokemon_energy_remaining = \
             self.page.query_selector_all('//table[contains(@class, "stats-table")]')[3].query_selector_all("//tr")[
                 9].inner_text().split()[2:4]
-        pokemon_list = {}
+        pokemon_stats = {}
 
         number_of_pokemon = 0
         while number_of_pokemon != 2:
-            pokemon_list[pokemon_names[number_of_pokemon]] = {
+            pokemon_stats[pokemon_names[number_of_pokemon]] = {
                 "Battle Rating": pokemon_battle_ratings[number_of_pokemon],
                 "Total Damage": pokemon_total_damage[number_of_pokemon],
                 "Fast Move Damage": pokemon_fast_move_damage[number_of_pokemon],
@@ -115,10 +115,13 @@ class PvPokePage(AbstractPage):
                 "Turns to first charged move": pokemon_turns_to_first_charged_move[number_of_pokemon],
                 "Energy Gained": pokemon_energy_gained[number_of_pokemon],
                 "Energy Used": pokemon_energy_used[number_of_pokemon],
-                "Energy Remaining": pokemon_energy_remaining[number_of_pokemon]
+                "Energy Remaining": pokemon_energy_remaining[number_of_pokemon],
+                "Wins": 0,
+                "Losts": 0
             }
             number_of_pokemon += 1
-        return pokemon_list
+
+        return pokemon_stats
 
     def who_won(self, picked_pokemon):
         outcome = self.page.text_content(self.outcome_section)
@@ -127,11 +130,12 @@ class PvPokePage(AbstractPage):
         if "wins" in outcome:
             logger.info(f"\n {picked_pokemon[0]} won!")
             logger.info(f"\n {picked_pokemon[1]} lost :( ")
+            return picked_pokemon[0], picked_pokemon[1]
         else:
             logger.info(f"\n {picked_pokemon[1]} won!")
             logger.info(f"\n {picked_pokemon[0]} lost :(")
+            return picked_pokemon[1], picked_pokemon[0]
 
-
-
-
-
+    def update_winner_and_loser(self, statistics, winner, loser):
+        statistics.get(f"{winner}")["Wins"] = +1
+        statistics.get(f"{loser}")["Losts"] = -1

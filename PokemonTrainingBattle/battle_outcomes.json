@@ -340,14 +340,16 @@
         "Energy Remaining": "0"
     },
     "Houndoom": {
-        "Battle Rating": "798",
-        "Total Damage": "127",
-        "Fast Move Damage": "35 (27.5%)",
-        "Charged Move Damage": "92 (72.4%)",
+        "Battle Rating": "630",
+        "Total Damage": "153",
+        "Fast Move Damage": "35 (22.8%)",
+        "Charged Move Damage": "118 (77.1%)",
         "Turns to first charged move": "15 (7.5s)",
-        "Energy Gained": "65",
-        "Energy Used": "45",
-        "Energy Remaining": "20"
+        "Energy Gained": "91",
+        "Energy Used": "90",
+        "Energy Remaining": "1",
+        "Wins": 1,
+        "Losts": 0
     },
     "Dratini": {
         "Battle Rating": "666",
@@ -510,14 +512,16 @@
         "Energy Remaining": "35"
     },
     "Rillaboom": {
-        "Battle Rating": "94",
-        "Total Damage": "32",
-        "Fast Move Damage": "32 (100%)",
+        "Battle Rating": "315",
+        "Total Damage": "99",
+        "Fast Move Damage": "99 (100%)",
         "Charged Move Damage": "0 (0%)",
         "Turns to first charged move": "-",
-        "Energy Gained": "32",
+        "Energy Gained": "44",
         "Energy Used": "0",
-        "Energy Remaining": "32"
+        "Energy Remaining": "44",
+        "Wins": 0,
+        "Losts": -1
     },
     "Tropius": {
         "Battle Rating": "905",
@@ -610,14 +614,16 @@
         "Energy Remaining": "11"
     },
     "Fennekin": {
-        "Battle Rating": "252",
-        "Total Damage": "48",
-        "Fast Move Damage": "48 (100%)",
-        "Charged Move Damage": "0 (0%)",
+        "Battle Rating": "628",
+        "Total Damage": "192",
+        "Fast Move Damage": "100 (52%)",
+        "Charged Move Damage": "92 (47.9%)",
         "Turns to first charged move": "18 (9s)",
-        "Energy Gained": "48",
-        "Energy Used": "0",
-        "Energy Remaining": "48"
+        "Energy Gained": "108",
+        "Energy Used": "100",
+        "Energy Remaining": "8",
+        "Wins": 1,
+        "Losts": 0
     },
     "Tapu": {
         "Battle Rating": "777",
@@ -700,14 +706,16 @@
         "Energy Remaining": "7"
     },
     "Aegislash": {
-        "Battle Rating": "944",
-        "Total Damage": "95",
-        "Fast Move Damage": "7 (7.3%)",
-        "Charged Move Damage": "88 (92.6%)",
+        "Battle Rating": "777",
+        "Total Damage": "135",
+        "Fast Move Damage": "34 (25.1%)",
+        "Charged Move Damage": "101 (74.8%)",
         "Turns to first charged move": "16 (8s)",
-        "Energy Gained": "63",
-        "Energy Used": "55",
-        "Energy Remaining": "8"
+        "Energy Gained": "136",
+        "Energy Used": "130",
+        "Energy Remaining": "6",
+        "Wins": 1,
+        "Losts": 0
     },
     "Hatterene": {
         "Battle Rating": "55",
@@ -890,14 +898,14 @@
         "Energy Remaining": "0"
     },
     "Baltoy": {
-        "Battle Rating": "401",
-        "Total Damage": "123",
-        "Fast Move Damage": "63 (51.2%)",
-        "Charged Move Damage": "60 (48.7%)",
-        "Turns to first charged move": "24 (12s)",
-        "Energy Gained": "84",
-        "Energy Used": "60",
-        "Energy Remaining": "24"
+        "Battle Rating": "229",
+        "Total Damage": "60",
+        "Fast Move Damage": "60 (100%)",
+        "Charged Move Damage": "0 (0%)",
+        "Turns to first charged move": "-",
+        "Energy Gained": "48",
+        "Energy Used": "0",
+        "Energy Remaining": "48"
     },
     "Trapinch": {
         "Battle Rating": "833",
@@ -1150,14 +1158,16 @@
         "Energy Remaining": "48"
     },
     "Ariados": {
-        "Battle Rating": "549",
-        "Total Damage": "108",
-        "Fast Move Damage": "30 (27.7%)",
-        "Charged Move Damage": "78 (72.2%)",
+        "Battle Rating": "659",
+        "Total Damage": "136",
+        "Fast Move Damage": "36 (26.4%)",
+        "Charged Move Damage": "100 (73.5%)",
         "Turns to first charged move": "12 (6s)",
         "Energy Gained": "72",
         "Energy Used": "70",
-        "Energy Remaining": "2"
+        "Energy Remaining": "2",
+        "Wins": 0,
+        "Losts": -1
     },
     "Huntail": {
         "Battle Rating": "450",
@@ -1529,114 +1539,232 @@
         "Energy Used": "0",
         "Energy Remaining": "18"
     },
-    "Vikavolt": {
-        "Battle Rating": "639",
-        "Total Damage": "133",
-        "Fast Move Damage": "45 (33.8%)",
-        "Charged Move Damage": "88 (66.1%)",
+    "Beartic": {
+        "Battle Rating": "330",
+        "Total Damage": "90",
+        "Fast Move Damage": "36 (40%)",
+        "Charged Move Damage": "54 (60%)",
+        "Turns to first charged move": "12 (6s)",
+        "Energy Gained": "96",
+        "Energy Used": "80",
+        "Energy Remaining": "16",
+        "Wins": 0,
+        "Losts": -1
+    },
+    "Lumineon": {
+        "Battle Rating": "669",
+        "Total Damage": "141",
+        "Fast Move Damage": "75 (53.1%)",
+        "Charged Move Damage": "66 (46.8%)",
         "Turns to first charged move": "16 (8s)",
+        "Energy Gained": "75",
+        "Energy Used": "75",
+        "Energy Remaining": "0",
+        "Wins": 1,
+        "Losts": 0
+    },
+    "Bellossom": {
+        "Battle Rating": "192",
+        "Total Damage": "42",
+        "Fast Move Damage": "42 (100%)",
+        "Charged Move Damage": "0 (0%)",
+        "Turns to first charged move": "16 (8s)",
+        "Energy Gained": "35",
+        "Energy Used": "0",
+        "Energy Remaining": "35",
+        "Wins": 0,
+        "Losts": -1
+    },
+    "Absol": {
+        "Battle Rating": "807",
+        "Total Damage": "157",
+        "Fast Move Damage": "21 (13.3%)",
+        "Charged Move Damage": "136 (86.6%)",
+        "Turns to first charged move": "14 (7s)",
+        "Energy Gained": "63",
+        "Energy Used": "55",
+        "Energy Remaining": "8",
+        "Wins": 1,
+        "Losts": 0
+    },
+    "Glastrier": {
+        "Battle Rating": "261",
+        "Total Damage": "66",
+        "Fast Move Damage": "66 (100%)",
+        "Charged Move Damage": "0 (0%)",
+        "Turns to first charged move": "-",
+        "Energy Gained": "44",
+        "Energy Used": "0",
+        "Energy Remaining": "44",
+        "Wins": 0,
+        "Losts": -1
+    },
+    "Donphan": {
+        "Battle Rating": "738",
+        "Total Damage": "126",
+        "Fast Move Damage": "84 (66.6%)",
+        "Charged Move Damage": "42 (33.3%)",
+        "Turns to first charged move": "21 (10.5s)",
+        "Energy Gained": "42",
+        "Energy Used": "35",
+        "Energy Remaining": "7",
+        "Wins": 1,
+        "Losts": 0
+    },
+    "Vibrava": {
+        "Battle Rating": "582",
+        "Total Damage": "197",
+        "Fast Move Damage": "100 (50.7%)",
+        "Charged Move Damage": "97 (49.2%)",
+        "Turns to first charged move": "21 (10.5s)",
+        "Energy Gained": "60",
+        "Energy Used": "60",
+        "Energy Remaining": "0",
+        "Wins": 0,
+        "Losts": -1
+    },
+    "Oshawott": {
+        "Battle Rating": "417",
+        "Total Damage": "106",
+        "Fast Move Damage": "60 (56.6%)",
+        "Charged Move Damage": "46 (43.3%)",
+        "Turns to first charged move": "13 (6.5s)",
+        "Energy Gained": "60",
+        "Energy Used": "35",
+        "Energy Remaining": "25",
+        "Wins": 1,
+        "Losts": 0
+    },
+    "Eelektross": {
+        "Battle Rating": "340",
+        "Total Damage": "96",
+        "Fast Move Damage": "36 (37.5%)",
+        "Charged Move Damage": "60 (62.5%)",
+        "Turns to first charged move": "20 (10s)",
         "Energy Gained": "45",
         "Energy Used": "45",
-        "Energy Remaining": "0"
+        "Energy Remaining": "0",
+        "Wins": 1,
+        "Losts": 0
     },
-    "Chimchar": {
-        "Battle Rating": "360",
-        "Total Damage": "80",
-        "Fast Move Damage": "80 (100%)",
+    "Garchomp": {
+        "Battle Rating": "156",
+        "Total Damage": "42",
+        "Fast Move Damage": "42 (100%)",
         "Charged Move Damage": "0 (0%)",
-        "Turns to first charged move": "-",
-        "Energy Gained": "48",
+        "Turns to first charged move": "24 (12s)",
+        "Energy Gained": "63",
         "Energy Used": "0",
-        "Energy Remaining": "48"
+        "Energy Remaining": "63",
+        "Wins": 0,
+        "Losts": -1
     },
-    "Nickit": {
-        "Battle Rating": "456",
-        "Total Damage": "116",
-        "Fast Move Damage": "27 (23.2%)",
-        "Charged Move Damage": "89 (76.7%)",
-        "Turns to first charged move": "12 (6s)",
-        "Energy Gained": "117",
-        "Energy Used": "95",
-        "Energy Remaining": "22"
-    },
-    "Rampardos": {
-        "Battle Rating": "784",
-        "Total Damage": "150",
-        "Fast Move Damage": "150 (100%)",
-        "Charged Move Damage": "0 (0%)",
-        "Turns to first charged move": "-",
-        "Energy Gained": "48",
-        "Energy Used": "0",
-        "Energy Remaining": "48"
-    },
-    "Chinchou": {
-        "Battle Rating": "478",
+    "Wormadam": {
+        "Battle Rating": "843",
         "Total Damage": "136",
-        "Fast Move Damage": "40 (29.4%)",
-        "Charged Move Damage": "96 (70.5%)",
-        "Turns to first charged move": "15 (7.5s)",
-        "Energy Gained": "110",
-        "Energy Used": "110",
-        "Energy Remaining": "0"
-    },
-    "Golem": {
-        "Battle Rating": "645",
-        "Total Damage": "177",
-        "Fast Move Damage": "93 (52.5%)",
-        "Charged Move Damage": "84 (47.4%)",
-        "Turns to first charged move": "18 (9s)",
-        "Energy Gained": "55",
-        "Energy Used": "55",
-        "Energy Remaining": "0"
-    },
-    "Dustox": {
-        "Battle Rating": "521",
-        "Total Damage": "167",
-        "Fast Move Damage": "88 (52.6%)",
-        "Charged Move Damage": "79 (47.3%)",
-        "Turns to first charged move": "20 (10s)",
-        "Energy Gained": "96",
+        "Fast Move Damage": "55 (40.4%)",
+        "Charged Move Damage": "81 (59.5%)",
+        "Turns to first charged move": "24 (12s)",
+        "Energy Gained": "60",
         "Energy Used": "60",
-        "Energy Remaining": "36"
+        "Energy Remaining": "0",
+        "Wins": 1,
+        "Losts": 0
     },
-    "Electivire": {
-        "Battle Rating": "531",
-        "Total Damage": "142",
-        "Fast Move Damage": "40 (28.1%)",
-        "Charged Move Damage": "102 (71.8%)",
-        "Turns to first charged move": "17 (8.5s)",
-        "Energy Gained": "40",
-        "Energy Used": "40",
-        "Energy Remaining": "0"
+    "Audino": {
+        "Battle Rating": "371",
+        "Total Damage": "84",
+        "Fast Move Damage": "57 (67.8%)",
+        "Charged Move Damage": "27 (32.1%)",
+        "Turns to first charged move": "25 (12.5s)",
+        "Energy Gained": "76",
+        "Energy Used": "45",
+        "Energy Remaining": "31",
+        "Wins": 0,
+        "Losts": -1
     },
-    "Archeops": {
-        "Battle Rating": "468",
-        "Total Damage": "103",
-        "Fast Move Damage": "28 (27.1%)",
-        "Charged Move Damage": "75 (72.8%)",
+    "Nuzleaf": {
+        "Battle Rating": "684",
+        "Total Damage": "130",
+        "Fast Move Damage": "60 (46.1%)",
+        "Charged Move Damage": "70 (53.8%)",
+        "Turns to first charged move": "14 (7s)",
+        "Energy Gained": "60",
+        "Energy Used": "45",
+        "Energy Remaining": "15",
+        "Wins": 1,
+        "Losts": 0
+    },
+    "Eiscue": {
+        "Battle Rating": "222",
+        "Total Damage": "60",
+        "Fast Move Damage": "34 (56.6%)",
+        "Charged Move Damage": "26 (43.3%)",
         "Turns to first charged move": "12 (6s)",
-        "Energy Gained": "49",
-        "Energy Used": "45",
-        "Energy Remaining": "4"
+        "Energy Gained": "136",
+        "Energy Used": "90",
+        "Energy Remaining": "46",
+        "Wins": 0,
+        "Losts": -1
     },
-    "Shiftry": {
-        "Battle Rating": "778",
-        "Total Damage": "122",
-        "Fast Move Damage": "45 (36.8%)",
-        "Charged Move Damage": "77 (63.1%)",
-        "Turns to first charged move": "15 (7.5s)",
-        "Energy Gained": "65",
+    "Morpeko": {
+        "Battle Rating": "934",
+        "Total Damage": "175",
+        "Fast Move Damage": "25 (14.2%)",
+        "Charged Move Damage": "150 (85.7%)",
+        "Turns to first charged move": "12 (6s)",
+        "Energy Gained": "45",
         "Energy Used": "45",
-        "Energy Remaining": "20"
+        "Energy Remaining": "0",
+        "Wins": 0,
+        "Losts": -1
     },
-    "Corphish": {
-        "Battle Rating": "221",
-        "Total Damage": "63",
-        "Fast Move Damage": "24 (38%)",
-        "Charged Move Damage": "39 (61.9%)",
-        "Turns to first charged move": "15 (7.5s)",
-        "Energy Gained": "44",
-        "Energy Used": "40",
-        "Energy Remaining": "4"
+    "Duosion": {
+        "Battle Rating": "65",
+        "Total Damage": "15",
+        "Fast Move Damage": "15 (100%)",
+        "Charged Move Damage": "0 (0%)",
+        "Turns to first charged move": "-",
+        "Energy Gained": "24",
+        "Energy Used": "0",
+        "Energy Remaining": "24",
+        "Wins": 1,
+        "Losts": 0
+    },
+    "Milotic": {
+        "Battle Rating": "369",
+        "Total Damage": "88",
+        "Fast Move Damage": "88 (100%)",
+        "Charged Move Damage": "0 (0%)",
+        "Turns to first charged move": "-",
+        "Energy Gained": "72",
+        "Energy Used": "0",
+        "Energy Remaining": "72",
+        "Wins": 0,
+        "Losts": -1
+    },
+    "Lugia": {
+        "Battle Rating": "291",
+        "Total Damage": "60",
+        "Fast Move Damage": "60 (100%)",
+        "Charged Move Damage": "0 (0%)",
+        "Turns to first charged move": "-",
+        "Energy Gained": "45",
+        "Energy Used": "0",
+        "Energy Remaining": "45",
+        "Wins": 0,
+        "Losts": -1
+    },
+    "Xurkitree": {
+        "Battle Rating": "708",
+        "Total Damage": "130",
+        "Fast Move Damage": "48 (36.9%)",
+        "Charged Move Damage": "82 (63%)",
+        "Turns to first charged move": "14 (7s)",
+        "Energy Gained": "64",
+        "Energy Used": "45",
+        "Energy Remaining": "19",
+        "Wins": 1,
+        "Losts": 0
     }
 }
