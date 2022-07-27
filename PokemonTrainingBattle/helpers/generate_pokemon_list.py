@@ -3,7 +3,7 @@ from pyotp import random
 
 
 def load_pokemon_list():
-    return json.load(open('pokemon-list.json'))
+    return json.load(open("pokemon-list.json"))
 
 
 def pick_random_two_pokemon():
@@ -54,7 +54,5 @@ def write_outcome_down(battle_outcome, winner, loser):
     dictObj.update(battle_outcome)
 
     # Dump to .json file
-    with open("battle_outcomes.json", 'w') as json_file:
-        json.dump(dictObj, json_file,
-                  indent=4,
-                  separators=(',', ': '))
+    with open("battle_outcomes.json", "w") as json_file:
+        json.dump(dictObj, json_file, indent=4, separators=(",", ": "))

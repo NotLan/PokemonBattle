@@ -5,7 +5,6 @@ from helpers.generate_pokemon_list import *
 
 
 class TestBattle:
-
     @pytest.fixture()
     def training_battle_page(self, page) -> PvPokePage:
         """
