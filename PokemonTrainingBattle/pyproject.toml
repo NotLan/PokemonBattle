@@ -16,6 +16,8 @@ python-slugify = "^6.1.1"
 python-dotenv = "^0.20.0"
 types-python-slugify = "^5.0.4"
 pyotp = "^2.6.0"
+pytest-xdist = "^2.5.0"
+pytest-flakefinder = "^1.0.0"
 
 [tool.poetry.dev-dependencies]
 pytest-bdd = "^5.0.0"

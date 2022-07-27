@@ -1,6 +1,7 @@
 import json
 from pyotp import random
 
+
 def load_pokemon_list():
     return json.load(open('pokemon-list.json'))
 
@@ -34,20 +35,25 @@ def write_outcome_down(battle_outcome, winner, loser):
         else:
             battle_outcome.get(f"{winner}")["Losses"] = dictObj.get(f"{winner}").get("Wins")
 
+    # Check to see if Loser has battled before, If not write 0 win and 1 losses
     if dictObj.get(f"{loser}") is None:
         battle_outcome[f"{loser}"]["Wins"] = 0
-        battle_outcome[f"{loser}"]["Losses"] = -1
-
+        battle_outcome[f"{loser}"]["Losses"] = 1
+    # If the loser has battled before, find out he numbers of losses and increment by +1 and write
     else:
         battle_outcome[f"{loser}"]["Losses"] = dictObj.get(f"{loser}")["Losses"]
-        battle_outcome[f"{winner}"]["Losses"] -= 1
-
+        battle_outcome[f"{loser}"]["Losses"] += 1
+        # If the losers wins is None write 0 to wins
         if dictObj.get(f"{loser}")["Wins"] is None:
             battle_outcome[f"{loser}"]["Wins"] = 0
+        # If the loser has wins, find out the number of losses and write
         else:
             battle_outcome.get(f"{loser}")["Wins"] = dictObj.get(f"{loser}").get("Wins")
 
+    # Update .json with battle outcome
     dictObj.update(battle_outcome)
+
+    # Dump to .json file
     with open("battle_outcomes.json", 'w') as json_file:
         json.dump(dictObj, json_file,
                   indent=4,

@@ -124,24 +124,11 @@ class PvPokePage(AbstractPage):
     def who_won(self, picked_pokemon):
         outcome = self.page.text_content(self.outcome_section)
         logger = logging.getLogger(__name__)
-
+        # Log to console the winner and loser
+        # I have to check to see if my pokemon had won or lost as it doesn't specify which pokemon won
         if "wins" in outcome:
-            logger.info(f"\n {picked_pokemon[0]} won!")
-            logger.info(f"\n {picked_pokemon[1]} lost :( ")
+            logger.info(f"\n {picked_pokemon[0]} won! \n {picked_pokemon[1]} lost :( \n Outcome was written to battle_outcome.json")
             return picked_pokemon[0], picked_pokemon[1]
         else:
-            logger.info(f"\n {picked_pokemon[1]} won!")
-            logger.info(f"\n {picked_pokemon[0]} lost :(")
+            logger.info(f"\n {picked_pokemon[1]} won! \n {picked_pokemon[0]} lost :( \n Outcome was written to battle_outcome.json")
             return picked_pokemon[1], picked_pokemon[0]
-
-    def update_winner_and_loser(self, statistics, winner, loser):
-        if statistics[f"{winner}"].get("Wins") is None:
-            statistics[f"{winner}"]["Wins"] = 1
-        else:
-            statistics.get(f"{winner}")["Wins"] += 1
-
-        if statistics[f"{loser}"].get("Losses") is None:
-            statistics[f"{loser}"]["Losses"] = -1
-        else:
-            statistics.get(f"{loser}")["Losses"] -= 1
-

@@ -22,7 +22,8 @@ class TestBattle:
         Sets the opponents pokemon via the UI
         Sets no shields for both
         Clicks battle
-        Once battle is won/lost the stats are written to ../battle_outcomes.json
+        Finds out if the users pokemon won or lost and logs to the user
+        Then the battle is logged to ../battle_outcomes.json
         """
         picked_pokemon = pick_random_two_pokemon()
         training_battle_page.select_users_pokemon(pokemon_list=picked_pokemon)
@@ -32,5 +33,4 @@ class TestBattle:
         training_battle_page.click_battle()
         winner, loser = training_battle_page.who_won(picked_pokemon)
         stats = training_battle_page.pull_stats()
-        #training_battle_page.update_winner_and_loser(stats, winner, loser)
         write_outcome_down(stats, winner, loser)
