@@ -19,23 +19,29 @@ def write_outcome_down(battle_outcome, winner, loser):
     with open("battle_outcomes.json") as fp:
         dictObj = json.load(fp)
 
+    # Check to see if winner has battled before, If not write 1 win and 0 losses
     if dictObj.get(f"{winner}") is None:
         battle_outcome[f"{winner}"]["Wins"] = 1
         battle_outcome[f"{winner}"]["Losses"] = 0
+    # If the winner has battled before, find out the number of wins and increment by +1 and write
     else:
+        battle_outcome[f"{winner}"]["Wins"] = dictObj.get(f"{winner}")["Wins"]
         battle_outcome[f"{winner}"]["Wins"] += 1
-        battle_outcome[f"{winner}"]["Losses"] = dictObj.get(f"{winner}")["Wins"]
+        # If the winner losses is None write 0 to losses
         if dictObj.get(f"{winner}")["Losses"] is None:
             battle_outcome.get(f"{winner}")["Losses"] = 0
+        # If the winner has losses, find out the number of losses and write
         else:
             battle_outcome.get(f"{winner}")["Losses"] = dictObj.get(f"{winner}").get("Wins")
 
     if dictObj.get(f"{loser}") is None:
         battle_outcome[f"{loser}"]["Wins"] = 0
         battle_outcome[f"{loser}"]["Losses"] = -1
+
     else:
-        battle_outcome[f"{winner}"]["Wins"] = dictObj.get(f"{loser}")["Wins"]
+        battle_outcome[f"{loser}"]["Losses"] = dictObj.get(f"{loser}")["Losses"]
         battle_outcome[f"{winner}"]["Losses"] -= 1
+
         if dictObj.get(f"{loser}")["Wins"] is None:
             battle_outcome[f"{loser}"]["Wins"] = 0
         else:
